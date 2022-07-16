@@ -1,7 +1,11 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import { Routes, Route, Link } from "react-router-dom";
+import Header from './Snips/header';
 import Home from './Pages/Home';
 import './App.css';
+import Cards from './Pages/Cards'
+import Login from './Pages/Login';
+import Builds from './Pages/Builds';
 
 // function Home() {
 //   return (
@@ -20,11 +24,14 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to React Router!</h1>
+      <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/card-index" element={<Cards />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Builds" element={<Builds />} />
       </Routes>
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -37,7 +44,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
